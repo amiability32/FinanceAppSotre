@@ -30,7 +30,7 @@ class AppListViewModel: NSObject{
     fileprivate func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(appListDidChangeNotification(_:)),
-                                               name: NSNotification.Name(rawValue: AppListNotifications.AppListDidChangeNotification),
+                                               name: NSNotification.Name(rawValue: Notifications.AppListDidChangeNotification),
                                                object: model)
     }
     

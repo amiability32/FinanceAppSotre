@@ -87,10 +87,42 @@
                         <viewControllerLayoutGuide type="top" id="I1D-Tk-ga8"/>
                         <viewControllerLayoutGuide type="bottom" id="AMN-MG-FDV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="64a-97-NAW">
+                    <view key="view" contentMode="scaleToFill" id="64a-97-NAW" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAD-dn-vyq" userLabel="Title View">
+                                <rect key="frame" x="16" y="64" width="343" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ze4-og-sKi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO6-gF-LvE" userLabel="ScreenShot View">
+                                <rect key="frame" x="16" y="164" width="343" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="CND-jc-8QG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZi-3P-JKf" userLabel="Description View">
+                                <rect key="frame" x="16" y="414" width="343" height="253"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jAD-dn-vyq" firstAttribute="top" secondItem="I1D-Tk-ga8" secondAttribute="bottom" id="I2q-Vh-9Jg"/>
+                            <constraint firstItem="nO6-gF-LvE" firstAttribute="leading" secondItem="64a-97-NAW" secondAttribute="leadingMargin" id="OBj-uo-iAj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nO6-gF-LvE" secondAttribute="trailing" id="amm-wV-jz9"/>
+                            <constraint firstItem="nO6-gF-LvE" firstAttribute="top" secondItem="jAD-dn-vyq" secondAttribute="bottom" id="biL-fe-9kF"/>
+                            <constraint firstItem="jZi-3P-JKf" firstAttribute="top" secondItem="nO6-gF-LvE" secondAttribute="bottom" id="epu-ZW-Ib7"/>
+                            <constraint firstItem="jZi-3P-JKf" firstAttribute="leading" secondItem="64a-97-NAW" secondAttribute="leadingMargin" id="f5N-kw-jOt"/>
+                            <constraint firstItem="AMN-MG-FDV" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="bottom" id="pZk-CR-KFN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jZi-3P-JKf" secondAttribute="trailing" id="qlc-LJ-95I"/>
+                            <constraint firstItem="jAD-dn-vyq" firstAttribute="leading" secondItem="64a-97-NAW" secondAttribute="leadingMargin" id="rkX-Jh-cpd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jAD-dn-vyq" secondAttribute="trailing" id="zpo-RV-Hpa"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqX-cy-50m" userLabel="First Responder" sceneMemberID="firstResponder"/>

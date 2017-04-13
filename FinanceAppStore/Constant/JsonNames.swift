@@ -20,6 +20,4 @@ struct JsonNames {
     
     static let IM_IMAGE = "im:image"
     
-    static let SUMMARY = "summary"
-    
 }
