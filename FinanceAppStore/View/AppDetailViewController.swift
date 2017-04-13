@@ -22,7 +22,11 @@ class AppDetailViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var artistNameLabel: UILabel!
     @IBOutlet var starRatingView: CosmosView!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var descriptionTitleLabel: UILabel!
+    @IBOutlet var contentLabel: UILabel!
+    
+    @IBOutlet var descriptionHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var descriptionVerticalConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +62,8 @@ extension AppDetailViewController: ViewModelDelegate {
     
     private func setDescriptionView() {
         guard let viewModel = viewModel else { return }
-        descriptionLabel.text = viewModel.description
+        contentLabel.text = viewModel.description
+        contentLabel.sizeToFit()
+        descriptionHeightConstraint.constant = descriptionTitleLabel.frame.height + descriptionVerticalConstraint.constant + contentLabel.frame.height
     }
 }
