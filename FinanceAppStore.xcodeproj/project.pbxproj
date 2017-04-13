@@ -20,6 +20,7 @@
 		3AD339FA1E9F68FD007DC84C /* ApplicationVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339F91E9F68FD007DC84C /* ApplicationVO.swift */; };
 		3AD339FC1E9F6934007DC84C /* AppListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339FB1E9F6934007DC84C /* AppListCell.swift */; };
 		3AD339FE1E9F6957007DC84C /* JsonNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339FD1E9F6957007DC84C /* JsonNames.swift */; };
+		3AD9389C1E9F7DD900B73932 /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9389B1E9F7DD900B73932 /* AppDetailViewController.swift */; };
 		3E63CA146D75FC51DADAD6D6 /* Pods_FinanceAppStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C5FEA0F33CB10C428F7E0B /* Pods_FinanceAppStoreUITests.framework */; };
 		6CF1ED39E60373C3AEA896E0 /* Pods_FinanceAppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65276FA0E18A076AFF2CAA88 /* Pods_FinanceAppStore.framework */; };
 		71EA915E9E20D99C437689F7 /* Pods_FinanceAppStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4211B4ADD2629D9B5BA163 /* Pods_FinanceAppStoreTests.framework */; };
@@ -64,6 +65,7 @@
 		3AD339F91E9F68FD007DC84C /* ApplicationVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationVO.swift; path = Model/ApplicationVO.swift; sourceTree = "<group>"; };
 		3AD339FB1E9F6934007DC84C /* AppListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListCell.swift; path = View/AppListCell.swift; sourceTree = "<group>"; };
 		3AD339FD1E9F6957007DC84C /* JsonNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonNames.swift; path = Model/JsonNames.swift; sourceTree = "<group>"; };
+		3AD9389B1E9F7DD900B73932 /* AppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDetailViewController.swift; path = View/AppDetailViewController.swift; sourceTree = "<group>"; };
 		43F811CCA8B593629C011263 /* Pods-FinanceAppStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceAppStoreUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinanceAppStoreUITests/Pods-FinanceAppStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4E4211B4ADD2629D9B5BA163 /* Pods_FinanceAppStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceAppStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51918E93716C31716A2492FA /* Pods-FinanceAppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceAppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinanceAppStore/Pods-FinanceAppStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				3AD339C21E9F66F2007DC84C /* Main.storyboard */,
 				3AD339F11E9F6848007DC84C /* AppListViewController.swift */,
 				3AD339FB1E9F6934007DC84C /* AppListCell.swift */,
+				3AD9389B1E9F7DD900B73932 /* AppDetailViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD9389C1E9F7DD900B73932 /* AppDetailViewController.swift in Sources */,
 				3AD339FE1E9F6957007DC84C /* JsonNames.swift in Sources */,
 				3AD339F41E9F6893007DC84C /* AppListViewModel.swift in Sources */,
 				3AD339F61E9F68BF007DC84C /* AppListViewModelDelegate.swift in Sources */,
@@ -748,6 +752,7 @@
 				3AD339E51E9F66F2007DC84C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AD339E61E9F66F2007DC84C /* Build configuration list for PBXNativeTarget "FinanceAppStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -756,6 +761,7 @@
 				3AD339E81E9F66F2007DC84C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AD339E91E9F66F2007DC84C /* Build configuration list for PBXNativeTarget "FinanceAppStoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -764,6 +770,7 @@
 				3AD339EB1E9F66F2007DC84C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

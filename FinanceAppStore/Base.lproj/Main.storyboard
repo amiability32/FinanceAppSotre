@@ -64,6 +64,7 @@
                                     <outlet property="iconImageView" destination="Ac9-A0-pd6" id="EF4-kT-dm5"/>
                                     <outlet property="rankLabel" destination="IOX-G8-Lx8" id="iHs-dL-eQW"/>
                                     <outlet property="titleLabel" destination="TaD-VG-6dF" id="dqf-wG-a36"/>
+                                    <segue destination="Fe6-kk-lPw" kind="show" id="TkW-j2-P2M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,6 +78,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6A-ME-Y5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="572" y="26"/>
+        </scene>
+        <!--App Detail View Controller-->
+        <scene sceneID="oFH-ut-7EQ">
+            <objects>
+                <viewController id="Fe6-kk-lPw" customClass="AppDetailViewController" customModule="FinanceAppStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I1D-Tk-ga8"/>
+                        <viewControllerLayoutGuide type="bottom" id="AMN-MG-FDV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="64a-97-NAW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqX-cy-50m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1375" y="26"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RWq-aI-WHd">
