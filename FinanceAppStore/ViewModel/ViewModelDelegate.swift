@@ -6,6 +6,6 @@
 //  Copyright © 2017년 sally. All rights reserved.
 //
 
-protocol AppListViewModelDelegate {
+protocol ViewModelDelegate {
     func reloadView()
 }

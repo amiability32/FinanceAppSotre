@@ -31,7 +31,7 @@ class AppDetailViewController: UIViewController {
     }
 }
 
-extension AppDetailViewController: AppDetailViewModelDelegate {
+extension AppDetailViewController: ViewModelDelegate {
     
     func reloadView() {
         setTitleView()

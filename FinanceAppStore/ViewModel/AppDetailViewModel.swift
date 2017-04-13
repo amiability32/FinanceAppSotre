@@ -11,7 +11,7 @@ import Foundation
 class AppDetailViewModel {
     
     var model: AppDetailModel
-    var delegate: AppDetailViewModelDelegate?
+    var delegate: ViewModelDelegate?
     var appId: String?
     private var appDetail: AppDetail?
     

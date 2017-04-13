@@ -11,7 +11,7 @@ import Foundation
 class AppListViewModel{
     
     var model: AppListModel
-    var delegate: AppListViewModelDelegate?
+    var delegate: ViewModelDelegate?
     private(set) var appList: [AppInfo]
     
     init() {

@@ -40,7 +40,7 @@ class AppListViewController: UITableViewController {
     }
 }
 
-extension AppListViewController: AppListViewModelDelegate {
+extension AppListViewController: ViewModelDelegate {
     
     func reloadView() {
         self.tableView.reloadData()
