@@ -13,7 +13,12 @@ class AppDetailViewModel {
     var model: AppDetailModel
     var delegate: AppDetailViewModelDelegate?
     var appId: String?
-    private(set) var appDetail: AppDetailVO?
+    private var appDetail: AppDetailVO?
+    
+    var name: String? = nil
+    var icon: URL? = nil
+    var rating: Float? = nil
+    var screenShot: [URL]? = nil
     
     init(appId: String) {
         self.appId = appId
@@ -40,7 +45,17 @@ class AppDetailViewModel {
     }
     
     @objc fileprivate func appListDidChangeNotification(_ notification: NSNotification){
-        self.appDetail = model.appDetail
+        guard let appDetail = model.appDetail else { return }
+        
+        self.appDetail = appDetail
+        self.name = appDetail.name
+        self.icon = URL(string: appDetail.iconUrl)
+        self.rating = appDetail.rating
+        self.screenShot = [URL]()
+        for urlItem in appDetail.screenShotUrl {
+            self.screenShot?.append(URL(string: urlItem)!)
+        }
+        
         delegate?.reloadView()
     }
     

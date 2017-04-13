@@ -11,7 +11,6 @@ import UIKit
 class AppDetailViewController: UIViewController {
 
     var appId: String?
-    fileprivate var appDetail: AppDetailVO?
     var viewModel: AppDetailViewModel?
     
     @IBOutlet var titleView: UIView!
@@ -28,32 +27,29 @@ class AppDetailViewController: UIViewController {
             viewModel = AppDetailViewModel(appId: appId)
             viewModel?.delegate = self
         }
-        
     }
 }
 
 extension AppDetailViewController: AppDetailViewModelDelegate {
     
     func reloadView() {
-        appDetail = viewModel?.appDetail
-        
         setTitleView()
         setScreenShotView()
         setDescriptionView()
     }
     
     private func setTitleView() {
-        guard let appDetail = appDetail else { return }
+        guard let viewModel = viewModel else { return }
         
-        iconImageView.af_setImage(withURL: URL(string: appDetail.iconUrl)!)
-        nameLabel.text = appDetail.name
+        iconImageView.af_setImage(withURL: viewModel.icon!)
+        nameLabel.text = viewModel.name!
     }
     
     private func setScreenShotView() {
-        guard let appDetail = appDetail else { return }
+        guard let viewModel = viewModel else { return }
     }
     
     private func setDescriptionView() {
-        guard let appDetail = appDetail else { return }
+        guard let viewModel = viewModel else { return }
     }
 }
