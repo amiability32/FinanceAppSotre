@@ -64,7 +64,7 @@
                                     <outlet property="iconImageView" destination="Ac9-A0-pd6" id="EF4-kT-dm5"/>
                                     <outlet property="rankLabel" destination="IOX-G8-Lx8" id="iHs-dL-eQW"/>
                                     <outlet property="titleLabel" destination="TaD-VG-6dF" id="dqf-wG-a36"/>
-                                    <segue destination="Fe6-kk-lPw" kind="show" id="TkW-j2-P2M"/>
+                                    <segue destination="Fe6-kk-lPw" kind="show" identifier="AppDetailSegue" id="TkW-j2-P2M"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

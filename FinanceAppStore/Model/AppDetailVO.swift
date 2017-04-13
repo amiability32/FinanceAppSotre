@@ -8,16 +8,27 @@
 
 import SwiftyJSON
 
+fileprivate struct JsonNames {
+    
+    static let ID = "trackId"
+    static let NAME = "trackName"
+    static let SCREENSHOT_URLS = "screenshotUrls"
+    static let DESCRIPTION = "description"
+}
+
+
 class AppDetailVO {
-    let id: String
-    let title: String
+    let id: Int
+    let name: String
     let screenShotUrl: [String]
+    let description: String
     
     
     init(_ json: JSON) {
-        id = json[JsonNames.ID][JsonNames.ATTRIBUTE][JsonNames.IM_ID].stringValue
-        title = json[JsonNames.TITLE][JsonNames.LABEL].stringValue
-        screenShotUrl = [String]()
+        id = json[JsonNames.ID].intValue
+        name = json[JsonNames.NAME].stringValue
+        screenShotUrl = json[JsonNames.SCREENSHOT_URLS].arrayObject as! [String]
+        description = json[JsonNames.DESCRIPTION].stringValue
     }
     
 }

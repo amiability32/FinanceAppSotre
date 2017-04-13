@@ -7,5 +7,6 @@
 //
 
 struct Notifications {
-    static let AppListDidChangeNotification = "AppListDidChangeNotification"
+    static let AppListDidChange = "AppListDidChange"
+    static let AppDetailDidChange = "AppDetailDidChange"
 }

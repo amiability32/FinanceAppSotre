@@ -8,6 +8,16 @@
 
 import SwiftyJSON
 
+fileprivate struct JsonNames {
+    static let LABEL = "label"
+    static let ATTRIBUTE = "attributes"
+    
+    static let ID = "id"
+    static let IM_ID = "im:id"
+    static let TITLE = "title"
+    static let IM_IMAGE = "im:image"
+}
+
 class AppVO {
     let id: String
     let title: String

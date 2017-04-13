@@ -9,12 +9,18 @@
 import Alamofire
 import SwiftyJSON
 
+fileprivate struct JsonNames {
+    static let FEED = "feed"
+    static let ENTRY = "entry"
+}
+
 class AppListModel {
+    private let APP_LIST_URL = "https://itunes.apple.com/kr/rss/topfreeapplications/limit=50/genre=6015/json"
     
     public private(set) var appList = [AppVO]()
     
     func load() {
-        Alamofire.request(Urls.APP_LIST, method: .get, parameters: nil).responseJSON { response in
+        Alamofire.request(APP_LIST_URL, method: .get, parameters: nil).responseJSON { response in
             guard let responseValue = response.result.value else { return }
             
             let json = JSON(responseValue)
@@ -26,7 +32,7 @@ class AppListModel {
                 self.appList.append(application)
             }
             
-            NotificationCenter.default.post(name: Notification.Name(rawValue: Notifications.AppListDidChangeNotification), object: self)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: Notifications.AppListDidChange), object: self)
         }
     }
 }

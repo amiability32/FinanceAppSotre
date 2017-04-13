@@ -8,17 +8,16 @@
 
 import Foundation
 
-class AppListViewModel: NSObject{
+class AppListViewModel{
     
     var model: AppListModel
     var delegate: AppListViewModelDelegate?
     private(set) var appList: [AppVO]
     
-    override init() {
+    init() {
         self.model = AppListModel()
         self.appList = model.appList
         
-        super.init()
         subscribeToNotifications()
         model.load()
     }
@@ -30,7 +29,7 @@ class AppListViewModel: NSObject{
     fileprivate func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(appListDidChangeNotification(_:)),
-                                               name: NSNotification.Name(rawValue: Notifications.AppListDidChangeNotification),
+                                               name: NSNotification.Name(rawValue: Notifications.AppListDidChange),
                                                object: model)
     }
     
