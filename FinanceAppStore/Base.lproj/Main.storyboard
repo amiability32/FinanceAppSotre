@@ -37,6 +37,7 @@
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ac9-A0-pd6" userLabel="Icon">
                                             <rect key="frame" x="46" y="1" width="53" height="53"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="53" id="LAl-Ua-PSn"/>
                                                 <constraint firstAttribute="width" constant="53" id="x6b-f9-M4F"/>
