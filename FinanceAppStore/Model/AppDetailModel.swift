@@ -18,7 +18,7 @@ class AppDetailModel {
     private let APP_DETAIL_URL = "https://itunes.apple.com/lookup"
     private let parameters: [String : Any]
     private let appId: String
-    public private(set) var appDetail: AppDetailVO?
+    public private(set) var appDetail: AppDetail?
     
     init(appId: String) {
         self.appId = appId
@@ -32,7 +32,7 @@ class AppDetailModel {
             let json = JSON(responseValue)
             let result = json[JsonNames.RESULTS].arrayValue[0]
             
-            self.appDetail = AppDetailVO(result)
+            self.appDetail = AppDetail(result)
             
             NotificationCenter.default.post(name: Notification.Name(rawValue: Notifications.AppDetailDidChange), object: self)
         }

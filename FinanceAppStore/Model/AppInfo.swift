@@ -18,7 +18,7 @@ fileprivate struct JsonNames {
     static let IM_IMAGE = "im:image"
 }
 
-class AppVO {
+class AppInfo {
     let id: String
     let title: String
     let iconUrl: String

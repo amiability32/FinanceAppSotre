@@ -13,7 +13,7 @@ class AppDetailViewModel {
     var model: AppDetailModel
     var delegate: AppDetailViewModelDelegate?
     var appId: String?
-    private var appDetail: AppDetailVO?
+    private var appDetail: AppDetail?
     
     var name: String? = nil
     var icon: URL? = nil

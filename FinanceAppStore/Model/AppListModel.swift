@@ -17,7 +17,7 @@ fileprivate struct JsonNames {
 class AppListModel {
     private let APP_LIST_URL = "https://itunes.apple.com/kr/rss/topfreeapplications/limit=50/genre=6015/json"
     
-    public private(set) var appList = [AppVO]()
+    public private(set) var appList = [AppInfo]()
     
     func load() {
         Alamofire.request(APP_LIST_URL, method: .get, parameters: nil).responseJSON { response in
@@ -28,7 +28,7 @@ class AppListModel {
             let entryArray = feed[JsonNames.ENTRY].arrayValue
             
             for entry in entryArray {
-                let application = AppVO(entry)
+                let application = AppInfo(entry)
                 self.appList.append(application)
             }
             

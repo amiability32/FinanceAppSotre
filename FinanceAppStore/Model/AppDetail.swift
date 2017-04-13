@@ -17,7 +17,7 @@ fileprivate struct JsonNames {
     static let RATING = "averageUserRatingForCurrentVersion"
 }
 
-class AppDetailVO {
+class AppDetail {
     let id: Int
     let name: String
     let iconUrl: String

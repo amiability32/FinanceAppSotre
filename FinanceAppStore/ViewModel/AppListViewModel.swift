@@ -12,7 +12,7 @@ class AppListViewModel{
     
     var model: AppListModel
     var delegate: AppListViewModelDelegate?
-    private(set) var appList: [AppVO]
+    private(set) var appList: [AppInfo]
     
     init() {
         self.model = AppListModel()
