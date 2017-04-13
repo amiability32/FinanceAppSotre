@@ -15,7 +15,7 @@ class AppListCell: UITableViewCell {
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     
-    func load(id: Int, _ application: ApplicationVO) {
+    func load(id: Int, _ application: AppVO) {
         rankLabel.text = "\(id)"
         iconImageView.af_setImage(withURL: URL.init(string: application.iconUrl)!)
         titleLabel.text = application.title

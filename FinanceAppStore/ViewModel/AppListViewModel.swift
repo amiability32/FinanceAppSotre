@@ -12,7 +12,7 @@ class AppListViewModel: NSObject{
     
     var model: AppListModel
     var delegate: AppListViewModelDelegate?
-    private(set) var appList: [ApplicationVO]
+    private(set) var appList: [AppVO]
     
     override init() {
         self.model = AppListModel()

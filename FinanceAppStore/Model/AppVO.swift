@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-class ApplicationVO {
+class AppVO {
     let id: String
     let title: String
     let iconUrl: String
