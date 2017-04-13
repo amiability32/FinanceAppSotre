@@ -28,8 +28,8 @@ class AppListModel {
             let entryArray = feed[JsonNames.ENTRY].arrayValue
             
             for entry in entryArray {
-                let application = AppInfo(entry)
-                self.appList.append(application)
+                let appInfo = AppInfo(entry)
+                self.appList.append(appInfo)
             }
             
             NotificationCenter.default.post(name: Notification.Name(rawValue: Notifications.AppListDidChange), object: self)

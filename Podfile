@@ -9,7 +9,7 @@ target 'FinanceAppStore' do
     pod 'Alamofire', '~> 4.4'
     pod 'AlamofireImage', '~> 3.1'
     pod 'SwiftyJSON', :git =>'https://github.com/SwiftyJSON/SwiftyJSON.git'
-
+    pod 'Cosmos', '~> 9.0'
 
   target 'FinanceAppStoreTests' do
     inherit! :search_paths

@@ -15,6 +15,7 @@ fileprivate struct JsonNames {
     static let SCREENSHOT_URLS = "screenshotUrls"
     static let DESCRIPTION = "description"
     static let RATING = "averageUserRatingForCurrentVersion"
+    static let RATING_COUNT = "userRatingCountForCurrentVersion"
 }
 
 class AppDetail {
@@ -23,7 +24,8 @@ class AppDetail {
     let iconUrl: String
     let screenShotUrl: [String]
     let description: String
-    let rating: Float
+    let rating: Double
+    let ratingCount: Int
     
     init(_ json: JSON) {
         id = json[JsonNames.ID].intValue
@@ -31,7 +33,8 @@ class AppDetail {
         iconUrl = json[JsonNames.ICON_URL].stringValue
         screenShotUrl = json[JsonNames.SCREENSHOT_URLS].arrayObject as! [String]
         description = json[JsonNames.DESCRIPTION].stringValue
-        rating = json[JsonNames.RATING].floatValue
+        rating = json[JsonNames.RATING].doubleValue
+        ratingCount = json[JsonNames.RATING_COUNT].intValue
     }
     
 }

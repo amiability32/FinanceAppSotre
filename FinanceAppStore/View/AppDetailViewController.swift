@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class AppDetailViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class AppDetailViewController: UIViewController {
     
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var starRatingView: CosmosView!
     @IBOutlet var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
@@ -44,6 +46,8 @@ extension AppDetailViewController: ViewModelDelegate {
         
         iconImageView.af_setImage(withURL: viewModel.icon!)
         nameLabel.text = viewModel.name
+        starRatingView.rating = viewModel.rating!
+        starRatingView.text = "(\(viewModel.ratingCount!))"
     }
     
     private func setScreenShotView() {

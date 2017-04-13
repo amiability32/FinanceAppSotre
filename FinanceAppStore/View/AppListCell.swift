@@ -13,11 +13,11 @@ class AppListCell: UITableViewCell {
     
     @IBOutlet var rankLabel: UILabel!
     @IBOutlet var iconImageView: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     
-    func load(id: Int, _ application: AppInfo) {
+    func load(id: Int, _ appInfo: AppInfo) {
         rankLabel.text = "\(id)"
-        iconImageView.af_setImage(withURL: URL.init(string: application.iconUrl)!)
-        titleLabel.text = application.title
+        iconImageView.af_setImage(withURL: URL.init(string: appInfo.iconUrl)!)
+        nameLabel.text = appInfo.name
     }
 }
