@@ -36,18 +36,18 @@ class AppDetailViewModel {
         unsubscribeFromNotifications()
     }
     
-    fileprivate func subscribeToNotifications() {
+    private func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(appListDidChangeNotification(_:)),
                                                name: NSNotification.Name(rawValue: Notifications.AppDetailDidChange),
                                                object: model)
     }
     
-    fileprivate func unsubscribeFromNotifications() {
+    private func unsubscribeFromNotifications() {
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc fileprivate func appListDidChangeNotification(_ notification: NSNotification){
+    @objc private func appListDidChangeNotification(_ notification: NSNotification){
         guard let appDetail = model.appDetail else { return }
         
         self.appDetail = appDetail
