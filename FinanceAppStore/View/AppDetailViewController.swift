@@ -19,6 +19,7 @@ class AppDetailViewController: UIViewController {
     
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,7 @@ extension AppDetailViewController: AppDetailViewModelDelegate {
         guard let viewModel = viewModel else { return }
         
         iconImageView.af_setImage(withURL: viewModel.icon!)
-        nameLabel.text = viewModel.name!
+        nameLabel.text = viewModel.name
     }
     
     private func setScreenShotView() {
@@ -51,5 +52,6 @@ extension AppDetailViewController: AppDetailViewModelDelegate {
     
     private func setDescriptionView() {
         guard let viewModel = viewModel else { return }
+        descriptionLabel.text = viewModel.description
     }
 }

@@ -129,10 +129,28 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZi-3P-JKf" userLabel="Description View">
-                                        <rect key="frame" x="0.0" y="330" width="375" height="300"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="0.0" y="330" width="375" height="267"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-nY-CWK">
+                                                <rect key="frame" x="8" y="0.0" width="30" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-PV-0k5" userLabel="Description">
+                                                <rect key="frame" x="8" y="30" width="367" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="3ga-Lj-x1t"/>
+                                            <constraint firstItem="BiE-nY-CWK" firstAttribute="leading" secondItem="jZi-3P-JKf" secondAttribute="leading" constant="8" id="Gpm-jz-VhS"/>
+                                            <constraint firstItem="jo5-PV-0k5" firstAttribute="leading" secondItem="jZi-3P-JKf" secondAttribute="leading" constant="8" id="PYr-Fh-LlV"/>
+                                            <constraint firstAttribute="height" constant="267" id="bjy-Gn-L3h"/>
+                                            <constraint firstItem="jo5-PV-0k5" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" constant="30" id="fUU-kK-KZk"/>
+                                            <constraint firstItem="BiE-nY-CWK" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" id="fma-8e-A7n"/>
+                                            <constraint firstAttribute="trailing" secondItem="jo5-PV-0k5" secondAttribute="trailing" id="iA4-de-1RW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -143,6 +161,7 @@
                                     <constraint firstItem="jAD-dn-vyq" firstAttribute="leading" secondItem="9AW-pO-Zvm" secondAttribute="leading" id="C0o-er-W6U"/>
                                     <constraint firstItem="jZi-3P-JKf" firstAttribute="top" secondItem="nO6-gF-LvE" secondAttribute="bottom" id="JjY-4t-YHt"/>
                                     <constraint firstItem="nO6-gF-LvE" firstAttribute="top" secondItem="jAD-dn-vyq" secondAttribute="bottom" id="L1P-7V-qFz"/>
+                                    <constraint firstAttribute="bottom" secondItem="jZi-3P-JKf" secondAttribute="bottom" id="PCQ-z4-s13"/>
                                     <constraint firstAttribute="trailing" secondItem="nO6-gF-LvE" secondAttribute="trailing" id="a9E-tv-D83"/>
                                     <constraint firstAttribute="trailing" secondItem="jZi-3P-JKf" secondAttribute="trailing" id="bWD-bs-IJY"/>
                                     <constraint firstItem="jZi-3P-JKf" firstAttribute="leading" secondItem="9AW-pO-Zvm" secondAttribute="leading" id="gD9-Vy-eXG"/>
@@ -153,13 +172,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9AW-pO-Zvm" firstAttribute="bottom" secondItem="AMN-MG-FDV" secondAttribute="top" id="2vO-Ym-7aL"/>
                             <constraint firstAttribute="trailing" secondItem="9AW-pO-Zvm" secondAttribute="trailing" id="JO3-NU-C91"/>
                             <constraint firstItem="9AW-pO-Zvm" firstAttribute="leading" secondItem="64a-97-NAW" secondAttribute="leading" id="RYA-1e-kP2"/>
-                            <constraint firstAttribute="bottom" secondItem="9AW-pO-Zvm" secondAttribute="bottom" id="fCp-sY-3Ly"/>
                             <constraint firstItem="9AW-pO-Zvm" firstAttribute="top" secondItem="64a-97-NAW" secondAttribute="top" id="phB-Qh-Bqn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="jo5-PV-0k5" id="Lrx-kF-G6K"/>
                         <outlet property="descriptionView" destination="jZi-3P-JKf" id="6Vk-qf-jQI"/>
                         <outlet property="iconImageView" destination="692-DR-YOa" id="kEs-bT-UDn"/>
                         <outlet property="nameLabel" destination="RXt-3y-Lfw" id="oNt-mS-iSJ"/>
@@ -169,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqX-cy-50m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="26"/>
+            <point key="canvasLocation" x="1373.5999999999999" y="25.637181409295355"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RWq-aI-WHd">

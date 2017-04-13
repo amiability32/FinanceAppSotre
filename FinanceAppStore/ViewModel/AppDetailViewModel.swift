@@ -19,6 +19,7 @@ class AppDetailViewModel {
     var icon: URL? = nil
     var rating: Float? = nil
     var screenShot: [URL]? = nil
+    var description: String? = nil
     
     init(appId: String) {
         self.appId = appId
@@ -51,6 +52,7 @@ class AppDetailViewModel {
         self.name = appDetail.name
         self.icon = URL(string: appDetail.iconUrl)
         self.rating = appDetail.rating
+        self.description = appDetail.description
         self.screenShot = [URL]()
         for urlItem in appDetail.screenShotUrl {
             self.screenShot?.append(URL(string: urlItem)!)
