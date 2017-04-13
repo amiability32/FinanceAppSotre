@@ -20,6 +20,7 @@ class AppDetailViewController: UIViewController {
     
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var artistNameLabel: UILabel!
     @IBOutlet var starRatingView: CosmosView!
     @IBOutlet var descriptionLabel: UILabel!
     
@@ -46,6 +47,7 @@ extension AppDetailViewController: ViewModelDelegate {
         
         iconImageView.af_setImage(withURL: viewModel.icon!)
         nameLabel.text = viewModel.name
+        artistNameLabel.text = viewModel.artistName
         starRatingView.rating = viewModel.rating!
         starRatingView.text = "(\(viewModel.ratingCount!))"
     }

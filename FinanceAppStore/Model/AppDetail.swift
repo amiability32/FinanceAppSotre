@@ -11,7 +11,8 @@ import SwiftyJSON
 fileprivate struct JsonNames {
     static let ID = "trackId"
     static let NAME = "trackName"
-    static let ICON_URL = "artworkUrl60"
+    static let ARTIST_NAME = "artistName"
+    static let ICON_URL = "artworkUrl100"
     static let SCREENSHOT_URLS = "screenshotUrls"
     static let DESCRIPTION = "description"
     static let RATING = "averageUserRatingForCurrentVersion"
@@ -21,6 +22,7 @@ fileprivate struct JsonNames {
 class AppDetail {
     let id: Int
     let name: String
+    let artistName: String
     let iconUrl: String
     let screenShotUrl: [String]
     let description: String
@@ -30,6 +32,7 @@ class AppDetail {
     init(_ json: JSON) {
         id = json[JsonNames.ID].intValue
         name = json[JsonNames.NAME].stringValue
+        artistName = json[JsonNames.ARTIST_NAME].stringValue
         iconUrl = json[JsonNames.ICON_URL].stringValue
         screenShotUrl = json[JsonNames.SCREENSHOT_URLS].arrayObject as! [String]
         description = json[JsonNames.DESCRIPTION].stringValue

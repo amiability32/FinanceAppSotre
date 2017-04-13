@@ -16,6 +16,7 @@ class AppDetailViewModel {
     private var appDetail: AppDetail?
     
     var name: String? = nil
+    var artistName: String? = nil
     var icon: URL? = nil
     var rating: Double? = nil
     var ratingCount: Int? = nil
@@ -51,6 +52,7 @@ class AppDetailViewModel {
         
         self.appDetail = appDetail
         self.name = appDetail.name
+        self.artistName = appDetail.artistName
         self.icon = URL(string: appDetail.iconUrl)
         self.rating = appDetail.rating
         self.ratingCount = appDetail.ratingCount
