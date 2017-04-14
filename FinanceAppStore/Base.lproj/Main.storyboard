@@ -98,26 +98,26 @@
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="100"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="692-DR-YOa" userLabel="Icon">
-                                                <rect key="frame" x="0.0" y="10" width="80" height="80"/>
+                                                <rect key="frame" x="8" y="10" width="80" height="80"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="Anx-u8-yGS"/>
                                                     <constraint firstAttribute="height" constant="80" id="DGe-ES-8fK"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXt-3y-Lfw" userLabel="Name">
-                                                <rect key="frame" x="88" y="10" width="263" height="18"/>
+                                                <rect key="frame" x="96" y="10" width="255" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxr-XY-fZL" userLabel="ArtistName">
-                                                <rect key="frame" x="88" y="32" width="31" height="15"/>
+                                                <rect key="frame" x="96" y="32" width="31" height="15"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQE-rT-Jxn" userLabel="Star Rating" customClass="CosmosView" customModule="Cosmos">
-                                                <rect key="frame" x="88" y="75" width="110" height="15"/>
+                                                <rect key="frame" x="96" y="75" width="110" height="15"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="NLG-EJ-LaM"/>
@@ -144,7 +144,7 @@
                                             <constraint firstAttribute="trailing" secondItem="RXt-3y-Lfw" secondAttribute="trailing" constant="8" id="RYb-iW-y6Z"/>
                                             <constraint firstItem="aQE-rT-Jxn" firstAttribute="leading" secondItem="692-DR-YOa" secondAttribute="trailing" constant="8" id="S7E-9d-TZK"/>
                                             <constraint firstItem="aQE-rT-Jxn" firstAttribute="bottom" secondItem="692-DR-YOa" secondAttribute="bottom" id="cYV-b0-zXQ"/>
-                                            <constraint firstItem="692-DR-YOa" firstAttribute="leading" secondItem="jAD-dn-vyq" secondAttribute="leading" id="fML-qK-REd"/>
+                                            <constraint firstItem="692-DR-YOa" firstAttribute="leading" secondItem="jAD-dn-vyq" secondAttribute="leading" constant="8" id="fML-qK-REd"/>
                                             <constraint firstItem="RXt-3y-Lfw" firstAttribute="leading" secondItem="692-DR-YOa" secondAttribute="trailing" constant="8" id="q8N-MK-wgH"/>
                                             <constraint firstItem="RXt-3y-Lfw" firstAttribute="top" secondItem="692-DR-YOa" secondAttribute="top" id="yv1-tK-tSk"/>
                                             <constraint firstAttribute="height" constant="100" id="ze4-og-sKi"/>
@@ -159,7 +159,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rbb-ZY-aot" userLabel="ScreenShot Collection View">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rbb-ZY-aot" userLabel="ScreenShot Collection View">
                                                 <rect key="frame" x="8" y="34" width="343" height="228"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DyM-HV-sxt">
@@ -215,7 +215,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-PV-0k5" userLabel="Content">
-                                                <rect key="frame" x="8" y="30" width="351" height="16"/>
+                                                <rect key="frame" x="8" y="30" width="343" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -227,7 +227,7 @@
                                             <constraint firstAttribute="height" constant="267" id="U6l-OB-QZw"/>
                                             <constraint firstItem="jo5-PV-0k5" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" constant="30" id="fUU-kK-KZk" userLabel="Title Bottom - Content Top Constraint"/>
                                             <constraint firstItem="BiE-nY-CWK" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" constant="8" id="fma-8e-A7n"/>
-                                            <constraint firstAttribute="trailing" secondItem="jo5-PV-0k5" secondAttribute="trailing" id="iA4-de-1RW"/>
+                                            <constraint firstAttribute="trailing" secondItem="jo5-PV-0k5" secondAttribute="trailing" constant="8" id="iA4-de-1RW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
