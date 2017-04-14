@@ -13,7 +13,6 @@
 		3AD339BF1E9F66F2007DC84C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339BE1E9F66F2007DC84C /* AppDelegate.swift */; };
 		3AD339C41E9F66F2007DC84C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD339C21E9F66F2007DC84C /* Main.storyboard */; };
 		3AD339C61E9F66F2007DC84C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD339C51E9F66F2007DC84C /* Assets.xcassets */; };
-		3AD339C91E9F66F2007DC84C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD339C71E9F66F2007DC84C /* LaunchScreen.storyboard */; };
 		3AD339D41E9F66F2007DC84C /* FinanceAppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339D31E9F66F2007DC84C /* FinanceAppStoreTests.swift */; };
 		3AD339DF1E9F66F2007DC84C /* FinanceAppStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339DE1E9F66F2007DC84C /* FinanceAppStoreUITests.swift */; };
 		3AD339F21E9F6848007DC84C /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339F11E9F6848007DC84C /* AppListViewController.swift */; };
@@ -58,7 +57,6 @@
 		3AD339BE1E9F66F2007DC84C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD339C31E9F66F2007DC84C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AD339C51E9F66F2007DC84C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3AD339C81E9F66F2007DC84C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AD339CA1E9F66F2007DC84C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AD339CF1E9F66F2007DC84C /* FinanceAppStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceAppStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD339D31E9F66F2007DC84C /* FinanceAppStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceAppStoreTests.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			children = (
 				3AD339BE1E9F66F2007DC84C /* AppDelegate.swift */,
 				3AD339C51E9F66F2007DC84C /* Assets.xcassets */,
-				3AD339C71E9F66F2007DC84C /* LaunchScreen.storyboard */,
 				3AD339CA1E9F66F2007DC84C /* Info.plist */,
 				3AD938A21E9F80D200B73932 /* Constant */,
 				3AD339EE1E9F6734007DC84C /* Model */,
@@ -357,7 +354,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD339C91E9F66F2007DC84C /* LaunchScreen.storyboard in Resources */,
 				3AD339C61E9F66F2007DC84C /* Assets.xcassets in Resources */,
 				3AD339C41E9F66F2007DC84C /* Main.storyboard in Resources */,
 			);
@@ -577,14 +573,6 @@
 				3AD339C31E9F66F2007DC84C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3AD339C71E9F66F2007DC84C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3AD339C81E9F66F2007DC84C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
