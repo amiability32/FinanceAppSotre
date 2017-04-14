@@ -32,6 +32,10 @@ class AppListViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        
         if segue.identifier == "AppDetailSegue" {
             let path = self.tableView.indexPath(for: sender as! AppListCell)
             let detailViewController = segue.destination as? AppDetailViewController
