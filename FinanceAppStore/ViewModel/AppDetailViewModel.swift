@@ -9,19 +9,20 @@
 import Foundation
 
 class AppDetailViewModel {
-    
-    var model: AppDetailModel
+
     var delegate: ViewModelDelegate?
-    var appId: String?
-    private var appDetail: AppDetail?
     
-    var name: String? = nil
-    var artistName: String? = nil
-    var icon: URL? = nil
-    var rating: Double? = nil
-    var ratingCount: Int? = nil
-    var screenShots: [URL]? = nil
-    var description: String? = nil
+    private(set) var name: String? = nil
+    private(set) var artistName: String? = nil
+    private(set) var icon: URL? = nil
+    private(set) var rating: Double? = nil
+    private(set) var ratingCount: Int? = nil
+    private(set) var screenShots: [URL]? = nil
+    private(set) var description: String? = nil
+    
+    private var model: AppDetailModel
+    private var appId: String?
+    private var appDetail: AppDetail?
     
     init(appId: String) {
         self.appId = appId

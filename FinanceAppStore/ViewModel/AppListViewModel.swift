@@ -10,9 +10,10 @@ import Foundation
 
 class AppListViewModel{
     
-    var model: AppListModel
     var delegate: ViewModelDelegate?
     private(set) var appList: [AppInfo]
+    
+    private var model: AppListModel
     
     init() {
         self.model = AppListModel()
