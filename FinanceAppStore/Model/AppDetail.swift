@@ -15,8 +15,13 @@ fileprivate struct JsonNames {
     static let ICON_URL = "artworkUrl100"
     static let SCREENSHOT_URLS = "screenshotUrls"
     static let DESCRIPTION = "description"
-    static let RATING = "averageUserRatingForCurrentVersion"
+    static let STAR_RATING = "averageUserRatingForCurrentVersion"
     static let RATING_COUNT = "userRatingCountForCurrentVersion"
+    static let SELLER_NAME = "sellerName"
+    static let UPDATE_DATE = "currentVersionReleaseDate"
+    static let VERSION = "version"
+    static let RATING = "trackContentRating"
+    static let MINIMUM_OS_VERSION = "minimumOsVersion"
 }
 
 class AppDetail {
@@ -26,8 +31,13 @@ class AppDetail {
     let iconUrl: String
     let screenShotUrl: [String]
     let description: String
-    let rating: Double
+    let starRating: Double
     let ratingCount: Int
+    let sellerName: String
+    let updateDate: String
+    let version: String
+    let rating: String
+    let minimumOSVersion: Double
     
     init(_ json: JSON) {
         id = json[JsonNames.ID].intValue
@@ -36,8 +46,13 @@ class AppDetail {
         iconUrl = json[JsonNames.ICON_URL].stringValue
         screenShotUrl = json[JsonNames.SCREENSHOT_URLS].arrayObject as! [String]
         description = json[JsonNames.DESCRIPTION].stringValue
-        rating = json[JsonNames.RATING].doubleValue
+        starRating = json[JsonNames.STAR_RATING].doubleValue
         ratingCount = json[JsonNames.RATING_COUNT].intValue
+        sellerName = json[JsonNames.SELLER_NAME].stringValue
+        updateDate = json[JsonNames.UPDATE_DATE].stringValue
+        version = json[JsonNames.VERSION].stringValue
+        rating = json[JsonNames.RATING].stringValue
+        minimumOSVersion = json[JsonNames.MINIMUM_OS_VERSION].doubleValue
     }
     
 }

@@ -15,10 +15,15 @@ class AppDetailViewModel {
     private(set) var name: String? = nil
     private(set) var artistName: String? = nil
     private(set) var icon: URL? = nil
-    private(set) var rating: Double? = nil
+    private(set) var starRating: Double? = nil
     private(set) var ratingCount: Int? = nil
     private(set) var screenShots: [URL]? = nil
     private(set) var description: String? = nil
+    private(set) var sellerName: String? = nil
+    private(set) var updateDate: String? = nil
+    private(set) var version: String? = nil
+    private(set) var rating: String? = nil
+    private(set) var minimumOSVersion: String? = nil
     
     private var model: AppDetailModel
     private var appId: String?
@@ -55,13 +60,20 @@ class AppDetailViewModel {
         self.name = appDetail.name
         self.artistName = appDetail.artistName
         self.icon = URL(string: appDetail.iconUrl)
-        self.rating = appDetail.rating
+        self.starRating = appDetail.starRating
         self.ratingCount = appDetail.ratingCount
         self.description = appDetail.description
+        
         self.screenShots = [URL]()
         for urlItem in appDetail.screenShotUrl {
             self.screenShots?.append(URL(string: urlItem)!)
         }
+        
+        self.sellerName = appDetail.sellerName
+        self.updateDate = appDetail.updateDate.components(separatedBy: "T")[0]
+        self.version = appDetail.version
+        self.rating = appDetail.rating
+        self.minimumOSVersion = "iOS \(appDetail.minimumOSVersion) 버전 이상이 필요"
         
         delegate?.reloadView()
     }

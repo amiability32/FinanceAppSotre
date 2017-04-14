@@ -23,7 +23,13 @@ class AppDetailViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet var screenShotCollectionView: UICollectionView!
     
     @IBOutlet var descriptionTitleLabel: UILabel!
-    @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var descriptioncontentLabel: UILabel!
+    
+    @IBOutlet var sellerNameLabel: UILabel!
+    @IBOutlet var updateLabel: UILabel!
+    @IBOutlet var versionLabel: UILabel!
+    @IBOutlet var ratingLabel: UILabel!
+    @IBOutlet var minimumOSLabel: UILabel!
     
     @IBOutlet var descriptionHeightConstraint: NSLayoutConstraint!
     @IBOutlet var descriptionVerticalConstraint: NSLayoutConstraint!
@@ -63,9 +69,9 @@ class AppDetailViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     private func expendDescriptionView() {
-        contentLabel.numberOfLines = 100
-        contentLabel.sizeToFit()
-        descriptionHeightConstraint.constant = descriptionTitleLabel.frame.height + descriptionVerticalConstraint.constant + contentLabel.frame.height
+        descriptioncontentLabel.numberOfLines = 100
+        descriptioncontentLabel.sizeToFit()
+        descriptionHeightConstraint.constant = descriptionTitleLabel.frame.height + descriptionVerticalConstraint.constant + descriptioncontentLabel.frame.height
         
         moreButton.isHidden = true
     }
@@ -77,6 +83,7 @@ extension AppDetailViewController: ViewModelDelegate{
         setTitleView()
         setScreenShotView()
         setDescriptionView()
+        setInfoView()
     }
     
     private func setTitleView() {
@@ -86,7 +93,7 @@ extension AppDetailViewController: ViewModelDelegate{
         iconImageView.af_setImage(withURL: viewModel.icon!)
         nameLabel.text = viewModel.name
         artistNameLabel.text = viewModel.artistName
-        starRatingView.rating = viewModel.rating!
+        starRatingView.rating = viewModel.starRating!
         starRatingView.text = "(\(viewModel.ratingCount!))"
     }
     
@@ -97,6 +104,17 @@ extension AppDetailViewController: ViewModelDelegate{
     private func setDescriptionView() {
         guard let viewModel = viewModel else { return }
         
-        contentLabel.text = viewModel.description
+        descriptioncontentLabel.text = viewModel.description
+    }
+    
+    private func setInfoView() {
+        guard let viewModel = viewModel else { return }
+        
+        let MARGIN = "     "
+        sellerNameLabel.text = "개발자" + MARGIN + viewModel.sellerName!
+        updateLabel.text = "업데이트" + MARGIN + viewModel.updateDate!
+        versionLabel.text = "버전" + MARGIN + viewModel.version!
+        ratingLabel.text = "등급" + MARGIN + viewModel.rating!
+        minimumOSLabel.text = "최소 버전" + MARGIN +  viewModel.minimumOSVersion!
     }
 }
