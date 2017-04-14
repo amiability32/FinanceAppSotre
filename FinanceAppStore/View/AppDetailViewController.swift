@@ -28,6 +28,11 @@ class AppDetailViewController: UIViewController, UICollectionViewDelegate, UICol
     @IBOutlet var descriptionHeightConstraint: NSLayoutConstraint!
     @IBOutlet var descriptionVerticalConstraint: NSLayoutConstraint!
     
+    @IBOutlet var moreButton: UIButton!
+    @IBAction func moreButtonAction(_ sender: Any) {
+        expendDescriptionView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +60,14 @@ class AppDetailViewController: UIViewController, UICollectionViewDelegate, UICol
         } else {
             return UICollectionViewCell()
         }
+    }
+    
+    private func expendDescriptionView() {
+        contentLabel.numberOfLines = 100
+        contentLabel.sizeToFit()
+        descriptionHeightConstraint.constant = descriptionTitleLabel.frame.height + descriptionVerticalConstraint.constant + contentLabel.frame.height
+        
+        moreButton.isHidden = true
     }
 }
 
@@ -85,7 +98,5 @@ extension AppDetailViewController: ViewModelDelegate{
         guard let viewModel = viewModel else { return }
         
         contentLabel.text = viewModel.description
-        contentLabel.sizeToFit()
-        descriptionHeightConstraint.constant = descriptionTitleLabel.frame.height + descriptionVerticalConstraint.constant + contentLabel.frame.height
     }
 }

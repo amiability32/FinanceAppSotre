@@ -206,28 +206,43 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZi-3P-JKf" userLabel="Description View">
-                                        <rect key="frame" x="0.0" y="480" width="359" height="267"/>
+                                        <rect key="frame" x="0.0" y="480" width="359" height="120"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-nY-CWK" userLabel="Description Title">
                                                 <rect key="frame" x="8" y="8" width="26" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="XEC-lQ-qk5"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-PV-0k5" userLabel="Content">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-PV-0k5" userLabel="Content">
                                                 <rect key="frame" x="8" y="30" width="343" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aae-Mq-Kwa" userLabel="More">
+                                                <rect key="frame" x="315" y="0.0" width="36" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="jBh-OZ-2nh"/>
+                                                </constraints>
+                                                <state key="normal" title="more"/>
+                                                <connections>
+                                                    <action selector="moreButtonAction:" destination="Fe6-kk-lPw" eventType="touchUpInside" id="I0s-Hd-IKv"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aae-Mq-Kwa" secondAttribute="trailing" constant="8" id="FBy-RG-wZs"/>
                                             <constraint firstItem="BiE-nY-CWK" firstAttribute="leading" secondItem="jZi-3P-JKf" secondAttribute="leading" constant="8" id="Gpm-jz-VhS"/>
                                             <constraint firstItem="jo5-PV-0k5" firstAttribute="leading" secondItem="jZi-3P-JKf" secondAttribute="leading" constant="8" id="PYr-Fh-LlV"/>
-                                            <constraint firstAttribute="height" constant="267" id="U6l-OB-QZw"/>
+                                            <constraint firstAttribute="height" constant="120" id="U6l-OB-QZw"/>
                                             <constraint firstItem="jo5-PV-0k5" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" constant="30" id="fUU-kK-KZk" userLabel="Title Bottom - Content Top Constraint"/>
                                             <constraint firstItem="BiE-nY-CWK" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" constant="8" id="fma-8e-A7n"/>
                                             <constraint firstAttribute="trailing" secondItem="jo5-PV-0k5" secondAttribute="trailing" constant="8" id="iA4-de-1RW"/>
+                                            <constraint firstItem="aae-Mq-Kwa" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" id="uEP-it-ROy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -261,6 +276,7 @@
                         <outlet property="descriptionTitleLabel" destination="BiE-nY-CWK" id="dvO-7n-ORo"/>
                         <outlet property="descriptionVerticalConstraint" destination="fUU-kK-KZk" id="V1o-gH-VAT"/>
                         <outlet property="iconImageView" destination="692-DR-YOa" id="kEs-bT-UDn"/>
+                        <outlet property="moreButton" destination="aae-Mq-Kwa" id="fXS-ob-Ssf"/>
                         <outlet property="nameLabel" destination="RXt-3y-Lfw" id="oNt-mS-iSJ"/>
                         <outlet property="screenShotCollectionView" destination="rbb-ZY-aot" id="8GQ-Bt-bqj"/>
                         <outlet property="starRatingView" destination="aQE-rT-Jxn" id="RoN-8Q-lbT"/>
