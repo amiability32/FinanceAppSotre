@@ -32,7 +32,7 @@
                                                 <constraint firstAttribute="width" constant="22" id="sZ5-Ew-AzE"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ac9-A0-pd6" userLabel="Icon">
@@ -151,7 +151,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO6-gF-LvE" userLabel="ScreenShot View">
-                                        <rect key="frame" x="0.0" y="100" width="359" height="270"/>
+                                        <rect key="frame" x="0.0" y="100" width="359" height="380"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-fL-5Cv" userLabel="ScreenShot Title">
                                                 <rect key="frame" x="8" y="8" width="47" height="18"/>
@@ -160,24 +160,24 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rbb-ZY-aot" userLabel="ScreenShot Collection View">
-                                                <rect key="frame" x="8" y="34" width="343" height="228"/>
+                                                <rect key="frame" x="8" y="34" width="343" height="330"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DyM-HV-sxt">
-                                                    <size key="itemSize" width="126" height="222"/>
+                                                    <size key="itemSize" width="189" height="303"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ScreenShotCollectionViewCell" id="qY7-1r-Nbt" userLabel="ScreenShot View Cell" customClass="ScreenShotCollectionViewCell" customModule="FinanceAppStore" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="3" width="126" height="222"/>
+                                                        <rect key="frame" x="0.0" y="13.5" width="189" height="303"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="126" height="222"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="189" height="303"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BA0-0l-KeO" userLabel="ScreenShot">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="126" height="222"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="189" height="303"/>
                                                                 </imageView>
                                                             </subviews>
                                                         </view>
@@ -197,16 +197,16 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="rbb-ZY-aot" firstAttribute="leading" secondItem="nO6-gF-LvE" secondAttribute="leading" constant="8" id="150-ch-7sW"/>
-                                            <constraint firstAttribute="height" constant="270" id="CND-jc-8QG"/>
+                                            <constraint firstAttribute="height" constant="380" id="CND-jc-8QG"/>
                                             <constraint firstItem="cOC-fL-5Cv" firstAttribute="leading" secondItem="nO6-gF-LvE" secondAttribute="leading" constant="8" id="Y5d-Va-URd"/>
                                             <constraint firstItem="rbb-ZY-aot" firstAttribute="top" secondItem="cOC-fL-5Cv" secondAttribute="bottom" constant="8" id="a2k-Ib-1ud"/>
-                                            <constraint firstAttribute="bottom" secondItem="rbb-ZY-aot" secondAttribute="bottom" constant="8" id="dfg-4w-ZhV"/>
+                                            <constraint firstAttribute="bottom" secondItem="rbb-ZY-aot" secondAttribute="bottom" constant="16" id="dfg-4w-ZhV"/>
                                             <constraint firstItem="cOC-fL-5Cv" firstAttribute="top" secondItem="nO6-gF-LvE" secondAttribute="top" constant="8" id="q8w-fJ-wjj"/>
                                             <constraint firstAttribute="trailing" secondItem="rbb-ZY-aot" secondAttribute="trailing" constant="8" id="zp1-g7-BXh"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZi-3P-JKf" userLabel="Description View">
-                                        <rect key="frame" x="0.0" y="370" width="359" height="267"/>
+                                        <rect key="frame" x="0.0" y="480" width="359" height="267"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-nY-CWK" userLabel="Description Title">
                                                 <rect key="frame" x="8" y="8" width="26" height="18"/>
