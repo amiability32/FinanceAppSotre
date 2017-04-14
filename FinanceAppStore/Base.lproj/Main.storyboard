@@ -14,20 +14,20 @@
         <scene sceneID="YlV-5G-iua">
             <objects>
                 <tableViewController id="aSc-lX-HCM" userLabel="App List View Controller" customClass="AppListViewController" customModule="FinanceAppStore" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="HML-oz-ti6" userLabel="App List View">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="HML-oz-ti6" userLabel="App List View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppListCell" id="hbd-bU-LQc" customClass="AppListCell" customModule="FinanceAppStore" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hbd-bU-LQc" id="Ain-YR-6nQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOX-G8-Lx8" userLabel="Rank">
-                                            <rect key="frame" x="16" y="24.5" width="22" height="21"/>
+                                            <rect key="frame" x="16" y="29.5" width="22" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="22" id="sZ5-Ew-AzE"/>
                                             </constraints>
@@ -36,15 +36,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ac9-A0-pd6" userLabel="Icon">
-                                            <rect key="frame" x="46" y="8.5" width="53" height="53"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <rect key="frame" x="46" y="13.5" width="53" height="53"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="53" id="LAl-Ua-PSn"/>
                                                 <constraint firstAttribute="width" constant="53" id="x6b-f9-M4F"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaD-VG-6dF" userLabel="Name">
-                                            <rect key="frame" x="107" y="8" width="252" height="18"/>
+                                            <rect key="frame" x="115" y="31" width="244" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -52,12 +52,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Ac9-A0-pd6" firstAttribute="leading" secondItem="IOX-G8-Lx8" secondAttribute="trailing" constant="8" id="14Z-V9-icK"/>
+                                        <constraint firstItem="TaD-VG-6dF" firstAttribute="centerY" secondItem="Ain-YR-6nQ" secondAttribute="centerY" id="8os-0E-Xte"/>
                                         <constraint firstItem="IOX-G8-Lx8" firstAttribute="centerY" secondItem="Ain-YR-6nQ" secondAttribute="centerY" id="Bea-lQ-amJ"/>
-                                        <constraint firstItem="TaD-VG-6dF" firstAttribute="top" secondItem="Ac9-A0-pd6" secondAttribute="top" id="IGt-Ow-fyz"/>
                                         <constraint firstItem="Ac9-A0-pd6" firstAttribute="centerY" secondItem="Ain-YR-6nQ" secondAttribute="centerY" id="Wzz-Mb-meH"/>
                                         <constraint firstItem="IOX-G8-Lx8" firstAttribute="leading" secondItem="Ain-YR-6nQ" secondAttribute="leadingMargin" constant="8" id="jZU-4o-y3D"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="TaD-VG-6dF" secondAttribute="trailing" constant="8" id="mgn-e8-anA"/>
-                                        <constraint firstItem="TaD-VG-6dF" firstAttribute="leading" secondItem="Ac9-A0-pd6" secondAttribute="trailing" constant="8" id="uR8-Ym-zGs"/>
+                                        <constraint firstItem="TaD-VG-6dF" firstAttribute="leading" secondItem="Ac9-A0-pd6" secondAttribute="trailing" constant="16" id="uR8-Ym-zGs"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

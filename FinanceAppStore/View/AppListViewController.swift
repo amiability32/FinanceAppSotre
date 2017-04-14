@@ -50,4 +50,3 @@ extension AppListViewController: ViewModelDelegate {
         self.tableView.reloadData()
     }
 }
-

@@ -2,12 +2,11 @@
 //  AppListCell.swift
 //  FinanceAppStore
 //
-//  Created by sally on 2017. 4. 10..
+//  Created by sally on 2017. 4. 14..
 //  Copyright © 2017년 sally. All rights reserved.
 //
 
 import UIKit
-import AlamofireImage
 
 class AppListCell: UITableViewCell {
     
@@ -16,6 +15,8 @@ class AppListCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     
     func load(id: Int, _ appInfo: AppInfo) {
+        iconImageView.setRounded()
+        
         rankLabel.text = "\(id)"
         iconImageView.af_setImage(withURL: URL.init(string: appInfo.iconUrl)!)
         nameLabel.text = appInfo.name

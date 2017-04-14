@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3ABF49F31EA0C9AF0038B41A /* ScreenShotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF49F21EA0C9AF0038B41A /* ScreenShotCollectionViewCell.swift */; };
+		3ABF49F61EA0E2460038B41A /* UIImageView+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF49F51EA0E2460038B41A /* UIImageView+Theme.swift */; };
+		3ABF49F81EA0E5980038B41A /* ScreenShotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF49F71EA0E5980038B41A /* ScreenShotCollectionViewCell.swift */; };
+		3ABF49FA1EA0E5C50038B41A /* AppListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF49F91EA0E5C50038B41A /* AppListCell.swift */; };
 		3AD339BF1E9F66F2007DC84C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339BE1E9F66F2007DC84C /* AppDelegate.swift */; };
 		3AD339C41E9F66F2007DC84C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD339C21E9F66F2007DC84C /* Main.storyboard */; };
 		3AD339C61E9F66F2007DC84C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD339C51E9F66F2007DC84C /* Assets.xcassets */; };
@@ -19,7 +21,6 @@
 		3AD339F61E9F68BF007DC84C /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339F51E9F68BF007DC84C /* ViewModelDelegate.swift */; };
 		3AD339F81E9F68DB007DC84C /* AppListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339F71E9F68DB007DC84C /* AppListModel.swift */; };
 		3AD339FA1E9F68FD007DC84C /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339F91E9F68FD007DC84C /* AppInfo.swift */; };
-		3AD339FC1E9F6934007DC84C /* AppListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD339FB1E9F6934007DC84C /* AppListCell.swift */; };
 		3AD9389C1E9F7DD900B73932 /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9389B1E9F7DD900B73932 /* AppDetailViewController.swift */; };
 		3AD9389E1E9F804700B73932 /* AppDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9389D1E9F804700B73932 /* AppDetailViewModel.swift */; };
 		3AD938A01E9F805800B73932 /* AppDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD9389F1E9F805800B73932 /* AppDetail.swift */; };
@@ -50,7 +51,9 @@
 /* Begin PBXFileReference section */
 		06116D64A82B58BDF1762BC4 /* Pods-FinanceAppStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceAppStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinanceAppStoreUITests/Pods-FinanceAppStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A7442DAB122EDE4CE3E4962 /* Pods-FinanceAppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceAppStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinanceAppStore/Pods-FinanceAppStore.debug.xcconfig"; sourceTree = "<group>"; };
-		3ABF49F21EA0C9AF0038B41A /* ScreenShotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenShotCollectionViewCell.swift; path = View/ScreenShotCollectionViewCell.swift; sourceTree = "<group>"; };
+		3ABF49F51EA0E2460038B41A /* UIImageView+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Theme.swift"; path = "Extenstion/UIImageView+Theme.swift"; sourceTree = "<group>"; };
+		3ABF49F71EA0E5980038B41A /* ScreenShotCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenShotCollectionViewCell.swift; path = View/ScreenShotCollectionViewCell.swift; sourceTree = "<group>"; };
+		3ABF49F91EA0E5C50038B41A /* AppListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListCell.swift; path = View/AppListCell.swift; sourceTree = "<group>"; };
 		3AD339BB1E9F66F2007DC84C /* FinanceAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD339BE1E9F66F2007DC84C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AD339C31E9F66F2007DC84C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +71,6 @@
 		3AD339F51E9F68BF007DC84C /* ViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModelDelegate.swift; path = ViewModel/ViewModelDelegate.swift; sourceTree = "<group>"; };
 		3AD339F71E9F68DB007DC84C /* AppListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListModel.swift; path = Model/AppListModel.swift; sourceTree = "<group>"; };
 		3AD339F91E9F68FD007DC84C /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfo.swift; path = Model/AppInfo.swift; sourceTree = "<group>"; };
-		3AD339FB1E9F6934007DC84C /* AppListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppListCell.swift; path = View/AppListCell.swift; sourceTree = "<group>"; };
 		3AD9389B1E9F7DD900B73932 /* AppDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDetailViewController.swift; path = View/AppDetailViewController.swift; sourceTree = "<group>"; };
 		3AD9389D1E9F804700B73932 /* AppDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDetailViewModel.swift; path = ViewModel/AppDetailViewModel.swift; sourceTree = "<group>"; };
 		3AD9389F1E9F805800B73932 /* AppDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDetail.swift; path = Model/AppDetail.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3ABF49F41EA0E21B0038B41A /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				3ABF49F51EA0E2460038B41A /* UIImageView+Theme.swift */,
+			);
+			name = Extenstion;
+			sourceTree = "<group>";
+		};
 		3AD339B21E9F66F2007DC84C = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 				3AD339EE1E9F6734007DC84C /* Model */,
 				3AD339ED1E9F6731007DC84C /* ViewModel */,
 				3AD339EC1E9F672E007DC84C /* View */,
+				3ABF49F41EA0E21B0038B41A /* Extenstion */,
 			);
 			path = FinanceAppStore;
 			sourceTree = "<group>";
@@ -171,9 +182,9 @@
 			children = (
 				3AD339C21E9F66F2007DC84C /* Main.storyboard */,
 				3AD339F11E9F6848007DC84C /* AppListViewController.swift */,
-				3AD339FB1E9F6934007DC84C /* AppListCell.swift */,
 				3AD9389B1E9F7DD900B73932 /* AppDetailViewController.swift */,
-				3ABF49F21EA0C9AF0038B41A /* ScreenShotCollectionViewCell.swift */,
+				3ABF49F91EA0E5C50038B41A /* AppListCell.swift */,
+				3ABF49F71EA0E5980038B41A /* ScreenShotCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -517,10 +528,11 @@
 				3AD938B01E9F824D00B73932 /* AppDetailModel.swift in Sources */,
 				3AD9389E1E9F804700B73932 /* AppDetailViewModel.swift in Sources */,
 				3AD339F61E9F68BF007DC84C /* ViewModelDelegate.swift in Sources */,
-				3AD339FC1E9F6934007DC84C /* AppListCell.swift in Sources */,
 				3AD339BF1E9F66F2007DC84C /* AppDelegate.swift in Sources */,
+				3ABF49F61EA0E2460038B41A /* UIImageView+Theme.swift in Sources */,
 				3AD339F81E9F68DB007DC84C /* AppListModel.swift in Sources */,
-				3ABF49F31EA0C9AF0038B41A /* ScreenShotCollectionViewCell.swift in Sources */,
+				3ABF49FA1EA0E5C50038B41A /* AppListCell.swift in Sources */,
+				3ABF49F81EA0E5980038B41A /* ScreenShotCollectionViewCell.swift in Sources */,
 				3AD339F21E9F6848007DC84C /* AppListViewController.swift in Sources */,
 				3AD339FA1E9F68FD007DC84C /* AppInfo.swift in Sources */,
 				3AD938A01E9F805800B73932 /* AppDetail.swift in Sources */,

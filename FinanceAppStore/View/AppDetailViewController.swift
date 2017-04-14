@@ -8,18 +8,19 @@
 
 import UIKit
 import Cosmos
+import AlamofireImage
 
 class AppDetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var appId: String?
     var viewModel: AppDetailViewModel?
     
-    @IBOutlet var screenShotCollectionView: UICollectionView!
-    
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var artistNameLabel: UILabel!
     @IBOutlet var starRatingView: CosmosView!
+    
+    @IBOutlet var screenShotCollectionView: UICollectionView!
     
     @IBOutlet var descriptionTitleLabel: UILabel!
     @IBOutlet var contentLabel: UILabel!
@@ -68,6 +69,7 @@ extension AppDetailViewController: ViewModelDelegate{
     private func setTitleView() {
         guard let viewModel = viewModel else { return }
         
+        iconImageView.setRounded()
         iconImageView.af_setImage(withURL: viewModel.icon!)
         nameLabel.text = viewModel.name
         artistNameLabel.text = viewModel.artistName
