@@ -20,7 +20,7 @@ class AppDetailViewModel {
     var icon: URL? = nil
     var rating: Double? = nil
     var ratingCount: Int? = nil
-    var screenShot: [URL]? = nil
+    var screenShots: [URL]? = nil
     var description: String? = nil
     
     init(appId: String) {
@@ -57,9 +57,9 @@ class AppDetailViewModel {
         self.rating = appDetail.rating
         self.ratingCount = appDetail.ratingCount
         self.description = appDetail.description
-        self.screenShot = [URL]()
+        self.screenShots = [URL]()
         for urlItem in appDetail.screenShotUrl {
-            self.screenShot?.append(URL(string: urlItem)!)
+            self.screenShots?.append(URL(string: urlItem)!)
         }
         
         delegate?.reloadView()

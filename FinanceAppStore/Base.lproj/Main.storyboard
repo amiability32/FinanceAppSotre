@@ -151,22 +151,70 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nO6-gF-LvE" userLabel="ScreenShot View">
-                                        <rect key="frame" x="0.0" y="100" width="359" height="250"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="CND-jc-8QG"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZi-3P-JKf" userLabel="Description View">
-                                        <rect key="frame" x="0.0" y="350" width="359" height="267"/>
+                                        <rect key="frame" x="0.0" y="100" width="359" height="270"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-nY-CWK" userLabel="description Title">
-                                                <rect key="frame" x="8" y="0.0" width="26" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-fL-5Cv" userLabel="ScreenShot Title">
+                                                <rect key="frame" x="8" y="8" width="47" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-PV-0k5" userLabel="content">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rbb-ZY-aot" userLabel="ScreenShot Collection View">
+                                                <rect key="frame" x="8" y="34" width="343" height="228"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DyM-HV-sxt">
+                                                    <size key="itemSize" width="126" height="222"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ScreenShotCollectionViewCell" id="qY7-1r-Nbt" userLabel="ScreenShot View Cell" customClass="ScreenShotCollectionViewCell" customModule="FinanceAppStore" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="3" width="126" height="222"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="126" height="222"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BA0-0l-KeO" userLabel="ScreenShot">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="126" height="222"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="BA0-0l-KeO" firstAttribute="leading" secondItem="qY7-1r-Nbt" secondAttribute="leading" id="3fS-x3-ouZ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="BA0-0l-KeO" secondAttribute="trailing" id="JJp-La-Alc"/>
+                                                            <constraint firstAttribute="bottom" secondItem="BA0-0l-KeO" secondAttribute="bottom" id="Ziw-we-2GJ"/>
+                                                            <constraint firstItem="BA0-0l-KeO" firstAttribute="top" secondItem="qY7-1r-Nbt" secondAttribute="top" id="bxz-OX-Afr"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="screenShotImageView" destination="BA0-0l-KeO" id="ISu-5E-ZfM"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rbb-ZY-aot" firstAttribute="leading" secondItem="nO6-gF-LvE" secondAttribute="leading" constant="8" id="150-ch-7sW"/>
+                                            <constraint firstAttribute="height" constant="270" id="CND-jc-8QG"/>
+                                            <constraint firstItem="cOC-fL-5Cv" firstAttribute="leading" secondItem="nO6-gF-LvE" secondAttribute="leading" constant="8" id="Y5d-Va-URd"/>
+                                            <constraint firstItem="rbb-ZY-aot" firstAttribute="top" secondItem="cOC-fL-5Cv" secondAttribute="bottom" constant="8" id="a2k-Ib-1ud"/>
+                                            <constraint firstAttribute="bottom" secondItem="rbb-ZY-aot" secondAttribute="bottom" constant="8" id="dfg-4w-ZhV"/>
+                                            <constraint firstItem="cOC-fL-5Cv" firstAttribute="top" secondItem="nO6-gF-LvE" secondAttribute="top" constant="8" id="q8w-fJ-wjj"/>
+                                            <constraint firstAttribute="trailing" secondItem="rbb-ZY-aot" secondAttribute="trailing" constant="8" id="zp1-g7-BXh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZi-3P-JKf" userLabel="Description View">
+                                        <rect key="frame" x="0.0" y="370" width="359" height="267"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiE-nY-CWK" userLabel="Description Title">
+                                                <rect key="frame" x="8" y="8" width="26" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo5-PV-0k5" userLabel="Content">
                                                 <rect key="frame" x="8" y="30" width="351" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -178,7 +226,7 @@
                                             <constraint firstItem="jo5-PV-0k5" firstAttribute="leading" secondItem="jZi-3P-JKf" secondAttribute="leading" constant="8" id="PYr-Fh-LlV"/>
                                             <constraint firstAttribute="height" constant="267" id="U6l-OB-QZw"/>
                                             <constraint firstItem="jo5-PV-0k5" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" constant="30" id="fUU-kK-KZk" userLabel="Title Bottom - Content Top Constraint"/>
-                                            <constraint firstItem="BiE-nY-CWK" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" id="fma-8e-A7n"/>
+                                            <constraint firstItem="BiE-nY-CWK" firstAttribute="top" secondItem="jZi-3P-JKf" secondAttribute="top" constant="8" id="fma-8e-A7n"/>
                                             <constraint firstAttribute="trailing" secondItem="jo5-PV-0k5" secondAttribute="trailing" id="iA4-de-1RW"/>
                                         </constraints>
                                     </view>
@@ -212,12 +260,10 @@
                         <outlet property="descriptionHeightConstraint" destination="U6l-OB-QZw" id="RSd-Lw-Sn6"/>
                         <outlet property="descriptionTitleLabel" destination="BiE-nY-CWK" id="dvO-7n-ORo"/>
                         <outlet property="descriptionVerticalConstraint" destination="fUU-kK-KZk" id="V1o-gH-VAT"/>
-                        <outlet property="descriptionView" destination="jZi-3P-JKf" id="6Vk-qf-jQI"/>
                         <outlet property="iconImageView" destination="692-DR-YOa" id="kEs-bT-UDn"/>
                         <outlet property="nameLabel" destination="RXt-3y-Lfw" id="oNt-mS-iSJ"/>
-                        <outlet property="screenShotView" destination="nO6-gF-LvE" id="6SO-vh-uK1"/>
+                        <outlet property="screenShotCollectionView" destination="rbb-ZY-aot" id="8GQ-Bt-bqj"/>
                         <outlet property="starRatingView" destination="aQE-rT-Jxn" id="RoN-8Q-lbT"/>
-                        <outlet property="titleView" destination="jAD-dn-vyq" id="Ypz-hA-Sp7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqX-cy-50m" userLabel="First Responder" sceneMemberID="firstResponder"/>

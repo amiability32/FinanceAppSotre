@@ -9,19 +9,18 @@
 import UIKit
 import Cosmos
 
-class AppDetailViewController: UIViewController {
+class AppDetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var appId: String?
     var viewModel: AppDetailViewModel?
     
-    @IBOutlet var titleView: UIView!
-    @IBOutlet var screenShotView: UIView!
-    @IBOutlet var descriptionView: UIView!
+    @IBOutlet var screenShotCollectionView: UICollectionView!
     
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var artistNameLabel: UILabel!
     @IBOutlet var starRatingView: CosmosView!
+    
     @IBOutlet var descriptionTitleLabel: UILabel!
     @IBOutlet var contentLabel: UILabel!
     
@@ -30,15 +29,35 @@ class AppDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        screenShotCollectionView.delegate = self
+        screenShotCollectionView.dataSource = self
+        
         if let appId = appId {
             viewModel = AppDetailViewModel(appId: appId)
             viewModel?.delegate = self
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let screenShots = viewModel?.screenShots else { return 0 }
+        
+        return screenShots.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let screenShots = viewModel?.screenShots else { return UICollectionViewCell()}
+        
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ScreenShotCollectionViewCell", for: indexPath) as? ScreenShotCollectionViewCell {
+            cell.load(screenShots[indexPath.row])
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
+    }
 }
 
-extension AppDetailViewController: ViewModelDelegate {
+extension AppDetailViewController: ViewModelDelegate{
     
     func reloadView() {
         setTitleView()
@@ -57,11 +76,12 @@ extension AppDetailViewController: ViewModelDelegate {
     }
     
     private func setScreenShotView() {
-        guard let viewModel = viewModel else { return }
+        screenShotCollectionView.reloadData()
     }
     
     private func setDescriptionView() {
         guard let viewModel = viewModel else { return }
+        
         contentLabel.text = viewModel.description
         contentLabel.sizeToFit()
         descriptionHeightConstraint.constant = descriptionTitleLabel.frame.height + descriptionVerticalConstraint.constant + contentLabel.frame.height
